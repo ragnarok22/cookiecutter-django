@@ -1,0 +1,8 @@
+-r base.txt # includes the base.txt requirements file
+
+Sphinx==2.4.4
+coverage==5.0.4
+# django-debug-toolbar==1.5
+
+# For windows wrapper virtualization
+# virtualenvwrapper-win==1.2.6

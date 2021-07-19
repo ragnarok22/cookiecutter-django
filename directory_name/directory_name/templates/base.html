@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block style %}{% endblock %}
+    <title>Title - {% block title %}{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+{% endblock %}
+
+<script src="{% static 'js/script.js' %}"></script>
+{% block script %}{% endblock %}
+</body>
+</html>
