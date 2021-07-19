@@ -13,7 +13,7 @@ SECRET_KEY = 'qov#ce&bl3z8@ymehv1byt^beru%el-0wjo%e#1q8#og6331ik'
 
 ALLOWED_HOSTS = ['*']
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'directory_name', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '{{cookiecutter.directory_name}}', 'media')
 
 # email settings
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

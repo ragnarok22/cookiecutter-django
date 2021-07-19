@@ -1,3 +1,6 @@
+# {{cookiecutter.directory_name}}
+{{cookiecutter.short_description}}
+
 Running in development mode
 ------
 

@@ -1,5 +1,5 @@
 """
-ASGI config for directory_name project.
+ASGI config for {{cookiecutter.directory_name}} project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'directory_name.config.settings.production')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{cookiecutter.directory_name}}.config.settings.production')
 
 application = get_asgi_application()
