@@ -1,4 +1,4 @@
-"""{{cookiecutter.directory_name}} URL Configuration
+"""{{cookiecutter.project_name}} URL Configuration
 """
 from django.contrib import admin
 from django.urls import path
