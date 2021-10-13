@@ -1,6 +1,8 @@
 # {{cookiecutter.project_name}}
 {{cookiecutter.short_description}}
 
+![Django CI](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.directory_name}}/actions/workflows/django-test.yml/badge.svg)
+
 License
 -------
 
