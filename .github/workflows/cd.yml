@@ -19,3 +19,6 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         if: startsWith('{{ github.ref }}', 'refs/tags/v')
+        with:
+          files:
+            - '{{ github.workflow.job.outputs.build_dir }}/{{ github.workflow.job.outputs.build_dir }}/dist/{{ github.workflow.job.outputs.package_name }}-{{ github.workflow.job.outputs.package_version }}.tgz'
