@@ -21,19 +21,15 @@ The generated project will be in the folder `my-project` (the name of your proje
     │   │   │   └── test_models.py
     │   │   ├── admin.py
     │   │   ├── apps.py
-    │   │   ├── constants.py                # constants for accounts app
     │   │   ├── models.py                   # models for accounts app
     │   │   ├── urls.py                     # urls for accounts app
-    │   │   ├── utils.py                    # utils for accounts app
     │   │   └── views.py
     │   ├── core                            # core application
     │   │   ├── migrations                  # migrations for core app
     │   │   ├── tests                       # tests
-    │   │   │   ├── test_forms.py
     │   │   │   ├── test_middleware.py
     │   │   │   ├── test_models.py
     │   │   │   ├── test_validators.py
-    │   │   │   └── test_views.py
     │   │   ├── apps.py
     │   │   ├── middleware                  # middlewares
     │   │   ├── models.py                   # basic models. Can be used by any application
