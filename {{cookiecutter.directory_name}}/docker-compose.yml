@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:13.4
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    env_file:
+      - .env
+  web:
+    container_name: {{cookiecutter.project_slug}}
+    build: .
+    command: gunicorn config.wsgi:application -b :8000 --log-file /code/logs/gunicorn.log
+    volumes:
+      - ./data/static:/code/static/
+      - ./data/media:/code/media/
+      - ./data/logs:/code/logs/
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: always
