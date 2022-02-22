@@ -33,6 +33,7 @@ def get_secret(setting, default=None, secret_file=secrets):
             raise ImproperlyConfigured(error_msg)
 
 
+# env-based secrets module
 def get_env_variable(var_name):
     """Get the environment variable or return exception."""
     try:
@@ -43,8 +44,7 @@ def get_env_variable(var_name):
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +52,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    # graphene_django and other cool stuff
+]
+
+LOCAL_APPS = [
+    'apps.accounts.apps.AccountsConfig',
+    'apps.core.apps.CoreConfig',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,3 +151,6 @@ LANGUAGES = [
     ('es', 'Spanish'),
     ('en', 'English'),
 ]
+
+# User model
+AUTH_USER_MODEL = 'accounts.User'
