@@ -11,7 +11,7 @@ Then you can use it to generate a project:
     $ cookiecutter gh:ragnarok22/cookiecutter-django
 
 ## Folder structure
-The generated project will be in the folder `my-project` and will contain the following files:
+The generated project will be in the folder `my-project` (the name of your project) and will contain the following files:
 
     .
     ├── apps                                # contains all applications
