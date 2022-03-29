@@ -8,7 +8,7 @@ services:
     env_file:
       - .env
   web:
-    container_name: {{cookiecutter.project_slug}}
+    container_name: {{cookiecutter.directory_name}}
     build: .
     command: gunicorn config.wsgi:application -b :8000 --log-file /code/logs/gunicorn.log
     volumes:
