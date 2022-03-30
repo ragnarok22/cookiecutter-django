@@ -12,7 +12,7 @@ Running in development mode
 ------
 First install the dependencies
 
-    pip install -r requirements/development.txt
+    pip install -r requirements/develop.txt
 Then run the development server
 
-    python manage.py runserver --settings=config.settings.development
+    python manage.py runserver --settings=config.settings.develop
