@@ -12,33 +12,15 @@ from django.core.exceptions import ImproperlyConfigured
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-# JSON-based secrets module
-try:
-    with open(os.path.join(BASE_DIR, 'secrets.json')) as f:
-        secrets = json.loads(f.read())
-except FileNotFoundError:
-    with open(os.path.join(BASE_DIR, 'secrets-example.json')) as f:
-        secrets = json.loads(f.read())
-
-
-def get_secret(setting, default=None, secret_file=secrets):
-    """Get the secret variable or return explicit exception."""
-    try:
-        return secret_file[setting]
-    except KeyError:
-        if default:
-            return default
-        else:
-            error_msg = 'Set the {0} environment variable'.format(setting)
-            raise ImproperlyConfigured(error_msg)
-
 
 # env-based secrets module
-def get_env_variable(var_name):
+def get_env_variable(var_name: str, default: str = None) -> str:
     """Get the environment variable or return exception."""
     try:
         return os.environ[var_name]
     except KeyError:
+        if default:
+            return default
         error_msg = 'Set the {} environment variable'.format(var_name)
         raise ImproperlyConfigured(error_msg)
 
