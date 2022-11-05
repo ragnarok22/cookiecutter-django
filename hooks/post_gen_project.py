@@ -1,7 +1,7 @@
 import os
 
 REMOVE_PATHS = [
-    '{% if cookiecutter.packaging != "pip" %} requirements.txt {% endif %}',
+    '{% if cookiecutter.packaging != "pip" %} requirements {% endif %}',
     '{% if cookiecutter.packaging != "poetry" %} poetry.lock {% endif %}',
 ]
 

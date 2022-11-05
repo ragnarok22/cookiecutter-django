@@ -6,7 +6,7 @@
 Simple cookiecutter for django
 
 ## Instalation
-First you must to install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html):
+First you must install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html):
 
     $ pip install cookiecutter
 
