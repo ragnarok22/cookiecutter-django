@@ -15,7 +15,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # env-based secrets module
 def get_env_variable(var_name: str, default: str = None) -> str:
-    """Get the environment variable or return exception."""
+    """Get the environment variable or return a default value.
+
+    :param var_name: environment variable name
+    :type var_name: str
+    :param default: default value to return if the variable doesn't exist
+    :type default: str
+    :return: the environment variable or the default
+    :rtype: str
+    :raises ImproperlyConfigured: when the variable doesn't exist and a default value weren't provided
+
+    :Example:
+
+    >>> my_secret = get_env_variable("MY_SECRET")
+    >>> my_secret_default = get_env_variable("MY_SECRET", "it's a secret")
+
+    """
     try:
         return os.environ[var_name]
     except KeyError:
