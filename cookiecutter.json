@@ -6,6 +6,7 @@
   "email": "jhon@example.com",
   "github_username": "jhon",
   "license": ["MIT", "GNU GPL v3.0", "Apache License 2.0", "Not open source"],
+  "packaging": ["pip", "poetry"],
   "_copy_without_render": [
       "*.html",
       ".github/*"
