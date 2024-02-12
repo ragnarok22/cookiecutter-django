@@ -1,11 +1,11 @@
 # cookiecutter-django
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ragnarok22/cookiecutter-django/Build)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ragnarok22/cookiecutter-django/cd.yml)
 [![GitHub license](https://img.shields.io/github/license/ragnarok22/cookiecutter-django)](https://github.com/ragnarok22/cookiecutter-django/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fragnarok22%2Fcookiecutter-django)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fragnarok22%2Fcookiecutter-django)
 
 Simple cookiecutter for django
 
-## Instalation
+## Installation
 First you must install [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/installation.html):
 
     $ pip install cookiecutter
